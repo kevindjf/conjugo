@@ -21,6 +21,9 @@ dependencies:
   # Nécessaire pour les animations ou transitions douces
   flutter_animate: ^4.5.0
 
+  # Audio pour les sons du jeu
+  audioplayers: ^5.2.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -33,3 +36,5 @@ flutter:
 
   assets:
     - assets/data/verbs.json
+    - assets/data/verbs_builder.json
+    - assets/sounds/

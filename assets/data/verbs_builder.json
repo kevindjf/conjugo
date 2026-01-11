@@ -1,0 +1,2018 @@
+[
+  {
+    "infinitif": "parler",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "parle",
+        "radical": "parl",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "parles",
+        "radical": "parl",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "parle",
+        "radical": "parl",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "parlons",
+        "radical": "parl",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "parlez",
+        "radical": "parl",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "parlent",
+        "radical": "parl",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "manger",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "mange",
+        "radical": "mang",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "manges",
+        "radical": "mang",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "mange",
+        "radical": "mang",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "mangeons",
+        "radical": "mang",
+        "terminaison": "eons"
+      },
+      "vous": {
+        "complet": "mangez",
+        "radical": "mang",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "mangent",
+        "radical": "mang",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "jouer",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "joue",
+        "radical": "jou",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "joues",
+        "radical": "jou",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "joue",
+        "radical": "jou",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "jouons",
+        "radical": "jou",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "jouez",
+        "radical": "jou",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "jouent",
+        "radical": "jou",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "aimer",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "aime",
+        "radical": "aim",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "aimes",
+        "radical": "aim",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "aime",
+        "radical": "aim",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "aimons",
+        "radical": "aim",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "aimez",
+        "radical": "aim",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "aiment",
+        "radical": "aim",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "chanter",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "chante",
+        "radical": "chant",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "chantes",
+        "radical": "chant",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "chante",
+        "radical": "chant",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "chantons",
+        "radical": "chant",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "chantez",
+        "radical": "chant",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "chantent",
+        "radical": "chant",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "danser",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "danse",
+        "radical": "dans",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "danses",
+        "radical": "dans",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "danse",
+        "radical": "dans",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "dansons",
+        "radical": "dans",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "dansez",
+        "radical": "dans",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "dansent",
+        "radical": "dans",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "regarder",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "regarde",
+        "radical": "regard",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "regardes",
+        "radical": "regard",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "regarde",
+        "radical": "regard",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "regardons",
+        "radical": "regard",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "regardez",
+        "radical": "regard",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "regardent",
+        "radical": "regard",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "écouter",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "écoute",
+        "radical": "écout",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "écoutes",
+        "radical": "écout",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "écoute",
+        "radical": "écout",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "écoutons",
+        "radical": "écout",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "écoutez",
+        "radical": "écout",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "écoutent",
+        "radical": "écout",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "travailler",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "travaille",
+        "radical": "travaill",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "travailles",
+        "radical": "travaill",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "travaille",
+        "radical": "travaill",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "travaillons",
+        "radical": "travaill",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "travaillez",
+        "radical": "travaill",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "travaillent",
+        "radical": "travaill",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "habiter",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "habite",
+        "radical": "habit",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "habites",
+        "radical": "habit",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "habite",
+        "radical": "habit",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "habitons",
+        "radical": "habit",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "habitez",
+        "radical": "habit",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "habitent",
+        "radical": "habit",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "marcher",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "marche",
+        "radical": "march",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "marches",
+        "radical": "march",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "marche",
+        "radical": "march",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "marchons",
+        "radical": "march",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "marchez",
+        "radical": "march",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "marchent",
+        "radical": "march",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "chercher",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "cherche",
+        "radical": "cherch",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "cherches",
+        "radical": "cherch",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "cherche",
+        "radical": "cherch",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "cherchons",
+        "radical": "cherch",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "cherchez",
+        "radical": "cherch",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "cherchent",
+        "radical": "cherch",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "trouver",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "trouve",
+        "radical": "trouv",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "trouves",
+        "radical": "trouv",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "trouve",
+        "radical": "trouv",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "trouvons",
+        "radical": "trouv",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "trouvez",
+        "radical": "trouv",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "trouvent",
+        "radical": "trouv",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "demander",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "demande",
+        "radical": "demand",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "demandes",
+        "radical": "demand",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "demande",
+        "radical": "demand",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "demandons",
+        "radical": "demand",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "demandez",
+        "radical": "demand",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "demandent",
+        "radical": "demand",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "donner",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "donne",
+        "radical": "donn",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "donnes",
+        "radical": "donn",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "donne",
+        "radical": "donn",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "donnons",
+        "radical": "donn",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "donnez",
+        "radical": "donn",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "donnent",
+        "radical": "donn",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "montrer",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "montre",
+        "radical": "montr",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "montres",
+        "radical": "montr",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "montre",
+        "radical": "montr",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "montrons",
+        "radical": "montr",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "montrez",
+        "radical": "montr",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "montrent",
+        "radical": "montr",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "porter",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "porte",
+        "radical": "port",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "portes",
+        "radical": "port",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "porte",
+        "radical": "port",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "portons",
+        "radical": "port",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "portez",
+        "radical": "port",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "portent",
+        "radical": "port",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "arriver",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "arrive",
+        "radical": "arriv",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "arrives",
+        "radical": "arriv",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "arrive",
+        "radical": "arriv",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "arrivons",
+        "radical": "arriv",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "arrivez",
+        "radical": "arriv",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "arrivent",
+        "radical": "arriv",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "entrer",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "entre",
+        "radical": "entr",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "entres",
+        "radical": "entr",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "entre",
+        "radical": "entr",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "entrons",
+        "radical": "entr",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "entrez",
+        "radical": "entr",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "entrent",
+        "radical": "entr",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "rentrer",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "rentre",
+        "radical": "rentr",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "rentres",
+        "radical": "rentr",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "rentre",
+        "radical": "rentr",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "rentrons",
+        "radical": "rentr",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "rentrez",
+        "radical": "rentr",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "rentrent",
+        "radical": "rentr",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "monter",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "monte",
+        "radical": "mont",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "montes",
+        "radical": "mont",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "monte",
+        "radical": "mont",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "montons",
+        "radical": "mont",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "montez",
+        "radical": "mont",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "montent",
+        "radical": "mont",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "descendre",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "descends",
+        "radical": "descen",
+        "terminaison": "ds"
+      },
+      "tu": {
+        "complet": "descends",
+        "radical": "descen",
+        "terminaison": "ds"
+      },
+      "il/elle": {
+        "complet": "descend",
+        "radical": "desce",
+        "terminaison": "nd"
+      },
+      "nous": {
+        "complet": "descendons",
+        "radical": "descend",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "descendez",
+        "radical": "descend",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "descendent",
+        "radical": "descend",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "tomber",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "tombe",
+        "radical": "tomb",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "tombes",
+        "radical": "tomb",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "tombe",
+        "radical": "tomb",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "tombons",
+        "radical": "tomb",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "tombez",
+        "radical": "tomb",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "tombent",
+        "radical": "tomb",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "rester",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "reste",
+        "radical": "rest",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "restes",
+        "radical": "rest",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "reste",
+        "radical": "rest",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "restons",
+        "radical": "rest",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "restez",
+        "radical": "rest",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "restent",
+        "radical": "rest",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "passer",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "passe",
+        "radical": "pass",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "passes",
+        "radical": "pass",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "passe",
+        "radical": "pass",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "passons",
+        "radical": "pass",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "passez",
+        "radical": "pass",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "passent",
+        "radical": "pass",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "répondre",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "réponds",
+        "radical": "répon",
+        "terminaison": "ds"
+      },
+      "tu": {
+        "complet": "réponds",
+        "radical": "répon",
+        "terminaison": "ds"
+      },
+      "il/elle": {
+        "complet": "répond",
+        "radical": "répo",
+        "terminaison": "nd"
+      },
+      "nous": {
+        "complet": "répondons",
+        "radical": "répond",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "répondez",
+        "radical": "répond",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "répondent",
+        "radical": "répond",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "comprendre",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "comprends",
+        "radical": "compren",
+        "terminaison": "ds"
+      },
+      "tu": {
+        "complet": "comprends",
+        "radical": "compren",
+        "terminaison": "ds"
+      },
+      "il/elle": {
+        "complet": "comprend",
+        "radical": "compre",
+        "terminaison": "nd"
+      },
+      "nous": {
+        "complet": "comprenons",
+        "radical": "compren",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "comprenez",
+        "radical": "compren",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "comprennent",
+        "radical": "comprenn",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "apprendre",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "apprends",
+        "radical": "appren",
+        "terminaison": "ds"
+      },
+      "tu": {
+        "complet": "apprends",
+        "radical": "appren",
+        "terminaison": "ds"
+      },
+      "il/elle": {
+        "complet": "apprend",
+        "radical": "appre",
+        "terminaison": "nd"
+      },
+      "nous": {
+        "complet": "apprenons",
+        "radical": "appren",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "apprenez",
+        "radical": "appren",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "apprennent",
+        "radical": "apprenn",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "finir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "finis",
+        "radical": "fini",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "finis",
+        "radical": "fini",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "finit",
+        "radical": "fini",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "finissons",
+        "radical": "finiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "finissez",
+        "radical": "finiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "finissent",
+        "radical": "finiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "choisir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "choisis",
+        "radical": "choisi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "choisis",
+        "radical": "choisi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "choisit",
+        "radical": "choisi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "choisissons",
+        "radical": "choisiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "choisissez",
+        "radical": "choisiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "choisissent",
+        "radical": "choisiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "grandir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "grandis",
+        "radical": "grandi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "grandis",
+        "radical": "grandi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "grandit",
+        "radical": "grandi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "grandissons",
+        "radical": "grandiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "grandissez",
+        "radical": "grandiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "grandissent",
+        "radical": "grandiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "réussir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "réussis",
+        "radical": "réussi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "réussis",
+        "radical": "réussi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "réussit",
+        "radical": "réussi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "réussissons",
+        "radical": "réussiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "réussissez",
+        "radical": "réussiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "réussissent",
+        "radical": "réussiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "agir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "agis",
+        "radical": "agi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "agis",
+        "radical": "agi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "agit",
+        "radical": "agi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "agissons",
+        "radical": "agiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "agissez",
+        "radical": "agiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "agissent",
+        "radical": "agiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "réfléchir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "réfléchis",
+        "radical": "réfléchi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "réfléchis",
+        "radical": "réfléchi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "réfléchit",
+        "radical": "réfléchi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "réfléchissons",
+        "radical": "réfléchiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "réfléchissez",
+        "radical": "réfléchiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "réfléchissent",
+        "radical": "réfléchiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "obéir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "obéis",
+        "radical": "obéi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "obéis",
+        "radical": "obéi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "obéit",
+        "radical": "obéi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "obéissons",
+        "radical": "obéiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "obéissez",
+        "radical": "obéiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "obéissent",
+        "radical": "obéiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "grossir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "grossis",
+        "radical": "grossi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "grossis",
+        "radical": "grossi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "grossit",
+        "radical": "grossi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "grossissons",
+        "radical": "grossiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "grossissez",
+        "radical": "grossiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "grossissent",
+        "radical": "grossiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "maigrir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "maigris",
+        "radical": "maigri",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "maigris",
+        "radical": "maigri",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "maigrit",
+        "radical": "maigri",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "maigrissons",
+        "radical": "maigriss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "maigrissez",
+        "radical": "maigriss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "maigrissent",
+        "radical": "maigriss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "rougir",
+    "groupe": "2",
+    "present": {
+      "je": {
+        "complet": "rougis",
+        "radical": "rougi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "rougis",
+        "radical": "rougi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "rougit",
+        "radical": "rougi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "rougissons",
+        "radical": "rougiss",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "rougissez",
+        "radical": "rougiss",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "rougissent",
+        "radical": "rougiss",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "prendre",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "prends",
+        "radical": "prend",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "prends",
+        "radical": "prend",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "prend",
+        "radical": "pren",
+        "terminaison": "d"
+      },
+      "nous": {
+        "complet": "prenons",
+        "radical": "pren",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "prenez",
+        "radical": "pren",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "prennent",
+        "radical": "prenn",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "dire",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "dis",
+        "radical": "di",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "dis",
+        "radical": "di",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "dit",
+        "radical": "di",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "disons",
+        "radical": "dis",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "dites",
+        "radical": "di",
+        "terminaison": "tes"
+      },
+      "ils/elles": {
+        "complet": "disent",
+        "radical": "dis",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "venir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "viens",
+        "radical": "vien",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "viens",
+        "radical": "vien",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "vient",
+        "radical": "vien",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "venons",
+        "radical": "ven",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "venez",
+        "radical": "ven",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "viennent",
+        "radical": "vienn",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "voir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "vois",
+        "radical": "voi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "vois",
+        "radical": "voi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "voit",
+        "radical": "voi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "voyons",
+        "radical": "voy",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "voyez",
+        "radical": "voy",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "voient",
+        "radical": "voi",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "devoir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "dois",
+        "radical": "doi",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "dois",
+        "radical": "doi",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "doit",
+        "radical": "doi",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "devons",
+        "radical": "dev",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "devez",
+        "radical": "dev",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "doivent",
+        "radical": "doiv",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "pouvoir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "peux",
+        "radical": "peu",
+        "terminaison": "x"
+      },
+      "tu": {
+        "complet": "peux",
+        "radical": "peu",
+        "terminaison": "x"
+      },
+      "il/elle": {
+        "complet": "peut",
+        "radical": "peu",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "pouvons",
+        "radical": "pouv",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "pouvez",
+        "radical": "pouv",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "peuvent",
+        "radical": "peuv",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "vouloir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "veux",
+        "radical": "veu",
+        "terminaison": "x"
+      },
+      "tu": {
+        "complet": "veux",
+        "radical": "veu",
+        "terminaison": "x"
+      },
+      "il/elle": {
+        "complet": "veut",
+        "radical": "veu",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "voulons",
+        "radical": "voul",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "voulez",
+        "radical": "voul",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "veulent",
+        "radical": "veul",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "savoir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "sais",
+        "radical": "sai",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "sais",
+        "radical": "sai",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "sait",
+        "radical": "sai",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "savons",
+        "radical": "sav",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "savez",
+        "radical": "sav",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "savent",
+        "radical": "sav",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "mettre",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "mets",
+        "radical": "met",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "mets",
+        "radical": "met",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "met",
+        "radical": "me",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "mettons",
+        "radical": "mett",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "mettez",
+        "radical": "mett",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "mettent",
+        "radical": "mett",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "lire",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "lis",
+        "radical": "li",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "lis",
+        "radical": "li",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "lit",
+        "radical": "li",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "lisons",
+        "radical": "lis",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "lisez",
+        "radical": "lis",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "lisent",
+        "radical": "lis",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "écrire",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "écris",
+        "radical": "écri",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "écris",
+        "radical": "écri",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "écrit",
+        "radical": "écri",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "écrivons",
+        "radical": "écriv",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "écrivez",
+        "radical": "écriv",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "écrivent",
+        "radical": "écriv",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "ouvrir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "ouvre",
+        "radical": "ouvr",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "ouvres",
+        "radical": "ouvre",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "ouvre",
+        "radical": "ouvr",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "ouvrons",
+        "radical": "ouvr",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "ouvrez",
+        "radical": "ouvr",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "ouvrent",
+        "radical": "ouvr",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "fermer",
+    "groupe": "1",
+    "present": {
+      "je": {
+        "complet": "ferme",
+        "radical": "ferm",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "fermes",
+        "radical": "ferm",
+        "terminaison": "es"
+      },
+      "il/elle": {
+        "complet": "ferme",
+        "radical": "ferm",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "fermons",
+        "radical": "ferm",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "fermez",
+        "radical": "ferm",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "ferment",
+        "radical": "ferm",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "partir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "pars",
+        "radical": "par",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "pars",
+        "radical": "par",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "part",
+        "radical": "par",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "partons",
+        "radical": "part",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "partez",
+        "radical": "part",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "partent",
+        "radical": "part",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "sortir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "sors",
+        "radical": "sor",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "sors",
+        "radical": "sor",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "sort",
+        "radical": "sor",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "sortons",
+        "radical": "sort",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "sortez",
+        "radical": "sort",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "sortent",
+        "radical": "sort",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "dormir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "dors",
+        "radical": "dor",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "dors",
+        "radical": "dor",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "dort",
+        "radical": "dor",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "dormons",
+        "radical": "dorm",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "dormez",
+        "radical": "dorm",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "dorment",
+        "radical": "dorm",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "servir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "sers",
+        "radical": "ser",
+        "terminaison": "s"
+      },
+      "tu": {
+        "complet": "sers",
+        "radical": "ser",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "sert",
+        "radical": "ser",
+        "terminaison": "t"
+      },
+      "nous": {
+        "complet": "servons",
+        "radical": "serv",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "servez",
+        "radical": "serv",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "servent",
+        "radical": "serv",
+        "terminaison": "ent"
+      }
+    }
+  },
+  {
+    "infinitif": "offrir",
+    "groupe": "3",
+    "present": {
+      "je": {
+        "complet": "offre",
+        "radical": "offr",
+        "terminaison": "e"
+      },
+      "tu": {
+        "complet": "offres",
+        "radical": "offre",
+        "terminaison": "s"
+      },
+      "il/elle": {
+        "complet": "offre",
+        "radical": "offr",
+        "terminaison": "e"
+      },
+      "nous": {
+        "complet": "offrons",
+        "radical": "offr",
+        "terminaison": "ons"
+      },
+      "vous": {
+        "complet": "offrez",
+        "radical": "offr",
+        "terminaison": "ez"
+      },
+      "ils/elles": {
+        "complet": "offrent",
+        "radical": "offr",
+        "terminaison": "ent"
+      }
+    }
+  }
+]
