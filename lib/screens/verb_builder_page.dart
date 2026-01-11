@@ -350,7 +350,7 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
               Wrap(
                 spacing: 12,
                 runSpacing: 12,
-                children: question.availableRadicals.map((part) {
+                children: question.availableRadicals.map<Widget>((part) {
                   return DraggableBrick(
                     part: part,
                     onDragStarted: () {
@@ -386,7 +386,7 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
               Wrap(
                 spacing: 12,
                 runSpacing: 12,
-                children: question.availableTerminaisons.map((part) {
+                children: question.availableTerminaisons.map<Widget>((part) {
                   return DraggableBrick(
                     part: part,
                     onDragStarted: () {

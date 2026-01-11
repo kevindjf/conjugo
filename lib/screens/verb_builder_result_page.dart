@@ -15,7 +15,9 @@ class VerbBuilderResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final percentage = (score / totalQuestions * 100).round();
+    final percentage = totalQuestions > 0
+        ? (score / totalQuestions * 100).round()
+        : 0;
     final stars = _calculateStars(percentage);
     final message = _getMessage(percentage);
 
