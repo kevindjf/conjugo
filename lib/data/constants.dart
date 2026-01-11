@@ -1,7 +1,10 @@
+/// Sujets de conjugaison (constante globale pour faciliter l'accès)
+const SUBJECTS = ['je', 'tu', 'il/elle', 'nous', 'vous', 'ils/elles'];
+
 /// Constantes utilisées dans l'application
 class AppConstants {
   // Sujets de conjugaison
-  static const subjects = ['je', 'tu', 'il/elle', 'nous', 'vous', 'ils/elles'];
+  static const subjects = SUBJECTS;
 
   // Options de temps de réponse (en secondes)
   static const timeLimits = [10, 15, 20, 30, 35];
