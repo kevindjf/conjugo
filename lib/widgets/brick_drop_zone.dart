@@ -31,8 +31,8 @@ class BrickDropZone extends StatelessWidget {
         final isHighlighted = candidateData.isNotEmpty;
 
         return Container(
-          width: 200,
-          height: 100,
+          width: 140,
+          height: 70,
           decoration: BoxDecoration(
             color: isHighlighted
                 ? (isRadical ? Colors.blue.shade100 : Colors.orange.shade100)
@@ -41,26 +41,27 @@ class BrickDropZone extends StatelessWidget {
               color: isHighlighted
                   ? (isRadical ? Colors.blue.shade600 : Colors.orange.shade600)
                   : borderColor,
-              width: isHighlighted ? 3 : 2,
+              width: isHighlighted ? 2 : 1.5,
             ),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(8),
           ),
           child: currentPart != null
               ? Center(
                   child: GestureDetector(
                     onTap: onRemove,
                     child: Stack(
+                      clipBehavior: Clip.none,
                       children: [
                         LegoBrick(
                           text: currentPart!.text,
                           isRadical: currentPart!.isRadical,
                         ),
                         Positioned(
-                          top: 0,
-                          right: 0,
+                          top: -8,
+                          right: -8,
                           child: Container(
-                            width: 24,
-                            height: 24,
+                            width: 20,
+                            height: 20,
                             decoration: BoxDecoration(
                               color: Colors.red,
                               shape: BoxShape.circle,
@@ -68,7 +69,7 @@ class BrickDropZone extends StatelessWidget {
                             child: Icon(
                               Icons.close,
                               color: Colors.white,
-                              size: 16,
+                              size: 14,
                             ),
                           ),
                         ),
@@ -81,14 +82,14 @@ class BrickDropZone extends StatelessWidget {
                   children: [
                     Icon(
                       isRadical ? Icons.category : Icons.label,
-                      size: 32,
+                      size: 24,
                       color: borderColor,
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 4),
                     Text(
                       label,
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 12,
                         fontWeight: FontWeight.bold,
                         color: borderColor,
                       ),
