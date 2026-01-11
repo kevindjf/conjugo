@@ -27,10 +27,28 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
   @override
   void initState() {
     super.initState();
+    // Forcer le mode paysage
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+
     // Initialiser le jeu
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ref.read(verbBuilderProvider.notifier).initGame(widget.config);
     });
+  }
+
+  @override
+  void dispose() {
+    // Restaurer toutes les orientations
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+    super.dispose();
   }
 
   @override
@@ -78,38 +96,51 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
     }
 
     return Scaffold(
-      backgroundColor: Colors.lightBlue.shade50,
+      backgroundColor: Color(0xFFB3E5FC), // Bleu ciel comme l'image
       body: SafeArea(
         child: Column(
           children: [
             // En-tête avec score et progression
             _buildHeader(state),
 
-            // Contenu principal
+            // Contenu principal en mode horizontal
             Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    // Mascotte et consigne
-                    _buildPrompt(question.getFullPrompt()),
-                    const SizedBox(height: 20),
+              child: Row(
+                children: [
+                  // Colonne gauche : Mascotte + Consigne
+                  Expanded(
+                    flex: 2,
+                    child: _buildLeftPanel(question.getFullPrompt()),
+                  ),
 
-                    // Zone d'assemblage
-                    _buildAssemblyZone(state),
-                    const SizedBox(height: 30),
+                  // Colonne centrale : Zone d'assemblage + Bac à briques
+                  Expanded(
+                    flex: 5,
+                    child: Column(
+                      children: [
+                        // Zone d'assemblage
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: _buildAssemblyZone(state),
+                        ),
 
-                    // Bac à briques
-                    _buildBrickBin(question),
-                    const SizedBox(height: 20),
+                        // Bac à briques
+                        Expanded(
+                          child: _buildBrickBin(question),
+                        ),
 
-                    // Bouton de validation
-                    if (!state.isAnswered) _buildValidateButton(state),
-
-                    // Feedback
-                    if (state.showFeedback) _buildFeedback(state, question),
-                  ],
-                ),
+                        // Bouton de validation ou Feedback
+                        if (state.showFeedback)
+                          _buildFeedback(state, question)
+                        else if (!state.isAnswered)
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: _buildValidateButton(state),
+                          ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -120,7 +151,7 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
 
   Widget _buildHeader(state) {
     return Container(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       decoration: BoxDecoration(
         color: Colors.blue.shade600,
         boxShadow: [
@@ -134,62 +165,50 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Score
-          Row(
-            children: [
-              Text(
-                'Score: ',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+          // Score avec étoiles
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Row(
+              children: [
+                Text(
+                  'Score: ',
+                  style: TextStyle(
+                    color: Colors.blue.shade800,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              ...List.generate(3, (index) {
-                return Icon(
-                  index < (state.score / (state.totalQuestions / 3)).floor()
-                      ? Icons.star
-                      : Icons.star_border,
-                  color: Colors.amber,
-                  size: 28,
-                );
-              }),
-            ],
+                ...List.generate(3, (index) {
+                  return Icon(
+                    index < (state.score / (state.totalQuestions / 3)).floor()
+                        ? Icons.star
+                        : Icons.star_border,
+                    color: Colors.amber,
+                    size: 20,
+                  );
+                }),
+              ],
+            ),
           ),
 
-          // Progression
+          // Titre
           Text(
-            '${state.currentIndex + 1}/${state.totalQuestions}',
+            'L\'ATELIER DES VERBES',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 18,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
             ),
           ),
 
-          // Timer (si mode expert)
-          if (widget.config.hasTimer)
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-              decoration: BoxDecoration(
-                color: state.timeRemaining <= 5
-                    ? Colors.red
-                    : Colors.white.withOpacity(0.2),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                '${state.timeRemaining}s',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-
-          // Bouton aide (?)
+          // Bouton aide
           IconButton(
-            icon: Icon(Icons.help_outline, color: Colors.white),
+            icon: Icon(Icons.help_outline, color: Colors.white, size: 28),
             onPressed: () {
               _showHelp();
             },
@@ -199,9 +218,10 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
     );
   }
 
-  Widget _buildPrompt(String prompt) {
+  Widget _buildLeftPanel(String prompt) {
     return Container(
-      padding: const EdgeInsets.all(20.0),
+      margin: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -213,12 +233,13 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
           ),
         ],
       ),
-      child: Row(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // Mascotte robot
           Container(
-            width: 80,
-            height: 80,
+            width: 120,
+            height: 120,
             decoration: BoxDecoration(
               color: Colors.blue.shade100,
               shape: BoxShape.circle,
@@ -226,26 +247,30 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
             child: Center(
               child: Text(
                 '🤖',
-                style: TextStyle(fontSize: 48),
+                style: TextStyle(fontSize: 72),
               ),
             ),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(height: 20),
 
           // Bulle de texte
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: Colors.blue.shade50,
-                borderRadius: BorderRadius.circular(12),
+          Container(
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: Colors.blue.shade50,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: Colors.blue.shade200,
+                width: 2,
               ),
-              child: Text(
-                prompt,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
+            ),
+            child: Text(
+              prompt,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                height: 1.4,
               ),
             ),
           ),
@@ -327,79 +352,121 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
   }
 
   Widget _buildBrickBin(question) {
-    return Column(
-      children: [
-        // Section Radicaux
-        Container(
-          padding: const EdgeInsets.all(16.0),
-          decoration: BoxDecoration(
-            color: Colors.blue.shade100,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Column(
-            children: [
-              Text(
-                'RADICAUX',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue.shade800,
-                ),
+    return Container(
+      padding: const EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.8),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Titre
+          Center(
+            child: Text(
+              'BAC À BRIQUES',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey.shade800,
               ),
-              const SizedBox(height: 12),
-              Wrap(
-                spacing: 12,
-                runSpacing: 12,
-                children: question.availableRadicals.map<Widget>((part) {
-                  return DraggableBrick(
-                    part: part,
-                    onDragStarted: () {
-                      HapticFeedback.lightImpact();
-                      AudioManager().play(AudioType.pick);
-                    },
-                  );
-                }).toList(),
-              ),
-            ],
+            ),
           ),
-        ),
-        const SizedBox(height: 16),
+          const SizedBox(height: 12),
 
-        // Section Terminaisons
-        Container(
-          padding: const EdgeInsets.all(16.0),
-          decoration: BoxDecoration(
-            color: Colors.orange.shade100,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Column(
-            children: [
-              Text(
-                'TERMINAISONS',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.orange.shade800,
+          // Briques côte à côte
+          Expanded(
+            child: Row(
+              children: [
+                // Section Radicaux (gauche)
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.all(12.0),
+                    decoration: BoxDecoration(
+                      color: Colors.blue.shade600,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'RADICAUX',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Expanded(
+                          child: SingleChildScrollView(
+                            child: Wrap(
+                              spacing: 8,
+                              runSpacing: 8,
+                              alignment: WrapAlignment.center,
+                              children: question.availableRadicals.map<Widget>((part) {
+                                return DraggableBrick(
+                                  part: part,
+                                  onDragStarted: () {
+                                    HapticFeedback.lightImpact();
+                                    AudioManager().play(AudioType.pick);
+                                  },
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-              const SizedBox(height: 12),
-              Wrap(
-                spacing: 12,
-                runSpacing: 12,
-                children: question.availableTerminaisons.map<Widget>((part) {
-                  return DraggableBrick(
-                    part: part,
-                    onDragStarted: () {
-                      HapticFeedback.lightImpact();
-                      AudioManager().play(AudioType.pick);
-                    },
-                  );
-                }).toList(),
-              ),
-            ],
+                const SizedBox(width: 16),
+
+                // Section Terminaisons (droite)
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.all(12.0),
+                    decoration: BoxDecoration(
+                      color: Colors.orange.shade600,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'TERMINAISONS',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Expanded(
+                          child: SingleChildScrollView(
+                            child: Wrap(
+                              spacing: 8,
+                              runSpacing: 8,
+                              alignment: WrapAlignment.center,
+                              children: question.availableTerminaisons.map<Widget>((part) {
+                                return DraggableBrick(
+                                  part: part,
+                                  onDragStarted: () {
+                                    HapticFeedback.lightImpact();
+                                    AudioManager().play(AudioType.pick);
+                                  },
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -439,8 +506,8 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
     final isTimeUp = state.isTimeUp;
 
     return Container(
-      padding: const EdgeInsets.all(20.0),
-      margin: const EdgeInsets.only(top: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
+      margin: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         color: isCorrect ? Colors.green.shade100 : Colors.red.shade100,
         borderRadius: BorderRadius.circular(12),
@@ -449,50 +516,62 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
           width: 3,
         ),
       ),
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                isCorrect ? Icons.check_circle : Icons.cancel,
-                color: isCorrect ? Colors.green : Colors.red,
-                size: 48,
-              ),
-              const SizedBox(width: 12),
-              Text(
-                isTimeUp
-                    ? 'Temps écoulé !'
-                    : isCorrect
-                        ? 'Bravo !'
-                        : 'Pas tout à fait...',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: isCorrect ? Colors.green.shade800 : Colors.red.shade800,
+          // Icône et message
+          Expanded(
+            child: Row(
+              children: [
+                Icon(
+                  isCorrect ? Icons.check_circle : Icons.cancel,
+                  color: isCorrect ? Colors.green : Colors.red,
+                  size: 36,
                 ),
-              ),
-            ],
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        isTimeUp
+                            ? 'Temps écoulé !'
+                            : isCorrect
+                                ? 'Bravo !'
+                                : 'Pas tout à fait...',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: isCorrect ? Colors.green.shade800 : Colors.red.shade800,
+                        ),
+                      ),
+                      if (!isCorrect && !isTimeUp) ...[
+                        const SizedBox(height: 4),
+                        Text(
+                          'Bonne réponse : ${question.correctAnswer.complet}',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.red.shade700,
+                          ),
+                        ),
+                        Text(
+                          '[${question.correctAnswer.radical}] + [${question.correctAnswer.terminaison}]',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.red.shade600,
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-          if (!isCorrect && !isTimeUp) ...[
-            const SizedBox(height: 12),
-            Text(
-              'La bonne réponse : ${question.correctAnswer.complet}',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.red.shade800,
-              ),
-            ),
-            Text(
-              '[${question.correctAnswer.radical}] + [${question.correctAnswer.terminaison}]',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: Colors.red.shade700,
-              ),
-            ),
-          ],
-          const SizedBox(height: 16),
+
+          // Bouton suivant
           ElevatedButton(
             onPressed: () {
               ref.read(verbBuilderProvider.notifier).nextQuestion();
@@ -500,8 +579,12 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue,
               foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             ),
-            child: Text('Question suivante'),
+            child: Text(
+              'Question suivante',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),
