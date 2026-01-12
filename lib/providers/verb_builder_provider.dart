@@ -23,6 +23,12 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
 
   /// Initialise le jeu avec une configuration
   Future<void> initGame(VerbBuilderConfig config) async {
+    // Réinitialiser l'état pour éviter les problèmes de navigation
+    state = const VerbBuilderState(questions: []);
+
+    // Annuler le timer précédent s'il existe
+    _timer?.cancel();
+
     // Charger les verbes sélectionnés
     final verbs = await VerbBuilderRepository.getVerbsByInfinitifs(config.selectedVerbs);
 
@@ -33,6 +39,11 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
 
     // Générer les questions
     final questions = _buildQuestions(verbs, config);
+
+    if (questions.isEmpty) {
+      print('❌ Aucune question générée');
+      return;
+    }
 
     // Initialiser l'état
     state = VerbBuilderState(
@@ -73,16 +84,14 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
       // Générer les briques (radicaux et terminaisons)
       final availableRadicals = _generateRadicals(
         correctRadical: correctAnswer.radical,
-        allVerbs: verbs,
+        currentVerb: verb,
         count: config.distractorCount,
-        currentGroupe: verb.groupe,
       );
 
       final availableTerminaisons = _generateTerminaisons(
         correctTerminaison: correctAnswer.terminaison,
-        allVerbs: verbs,
+        currentVerb: verb,
         count: config.distractorCount,
-        currentGroupe: verb.groupe,
       );
 
       // Créer la question
@@ -99,44 +108,26 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
     return questions;
   }
 
-  /// Génère les briques radicaux (1 correct + N pièges)
+  /// Génère les briques radicaux (1 correct + N pièges du même verbe)
   List<VerbPart> _generateRadicals({
     required String correctRadical,
-    required List<VerbBuilder> allVerbs,
+    required VerbBuilder currentVerb,
     required int count,
-    String? currentGroupe,
   }) {
     final radicals = <VerbPart>[
       VerbPart(text: correctRadical, isRadical: true),
     ];
 
-    // Ajouter des radicaux pièges du même groupe si possible
-    final sameGroupeVerbs = currentGroupe != null
-        ? allVerbs.where((v) => v.groupe == currentGroupe).toList()
-        : allVerbs;
-
-    final allRadicals = sameGroupeVerbs
-        .expand((v) => v.uniqueRadicals)
+    // Prendre les radicaux pièges du MÊME VERBE uniquement
+    final verbRadicals = currentVerb.uniqueRadicals
         .where((r) => r != correctRadical)
-        .toSet()
         .toList();
 
-    allRadicals.shuffle(_random);
+    verbRadicals.shuffle(_random);
 
-    // Si pas assez de radicaux du même groupe, prendre des autres groupes
-    final selectedRadicals = allRadicals.take(count).toList();
-    if (selectedRadicals.length < count) {
-      final otherRadicals = allVerbs
-          .where((v) => v.groupe != currentGroupe)
-          .expand((v) => v.uniqueRadicals)
-          .where((r) => r != correctRadical && !selectedRadicals.contains(r))
-          .toSet()
-          .toList();
-      otherRadicals.shuffle(_random);
-      selectedRadicals.addAll(otherRadicals.take(count - selectedRadicals.length));
-    }
-
-    for (final radical in selectedRadicals) {
+    // Ajouter les radicaux pièges (limité par count et ce qui est disponible)
+    final trapCount = verbRadicals.length < count ? verbRadicals.length : count;
+    for (final radical in verbRadicals.take(trapCount)) {
       radicals.add(VerbPart(text: radical, isRadical: true));
     }
 
@@ -146,44 +137,26 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
     return radicals;
   }
 
-  /// Génère les briques terminaisons (1 correcte + N pièges)
+  /// Génère les briques terminaisons (1 correcte + N pièges du même verbe)
   List<VerbPart> _generateTerminaisons({
     required String correctTerminaison,
-    required List<VerbBuilder> allVerbs,
+    required VerbBuilder currentVerb,
     required int count,
-    String? currentGroupe,
   }) {
     final terminaisons = <VerbPart>[
       VerbPart(text: correctTerminaison, isRadical: false),
     ];
 
-    // Ajouter des terminaisons pièges du même groupe si possible
-    final sameGroupeVerbs = currentGroupe != null
-        ? allVerbs.where((v) => v.groupe == currentGroupe).toList()
-        : allVerbs;
-
-    final allTerminaisons = sameGroupeVerbs
-        .expand((v) => v.uniqueTerminaisons)
+    // Prendre les terminaisons pièges du MÊME VERBE uniquement
+    final verbTerminaisons = currentVerb.uniqueTerminaisons
         .where((t) => t != correctTerminaison)
-        .toSet()
         .toList();
 
-    allTerminaisons.shuffle(_random);
+    verbTerminaisons.shuffle(_random);
 
-    // Si pas assez de terminaisons du même groupe, prendre des autres groupes
-    final selectedTerminaisons = allTerminaisons.take(count).toList();
-    if (selectedTerminaisons.length < count) {
-      final otherTerminaisons = allVerbs
-          .where((v) => v.groupe != currentGroupe)
-          .expand((v) => v.uniqueTerminaisons)
-          .where((t) => t != correctTerminaison && !selectedTerminaisons.contains(t))
-          .toSet()
-          .toList();
-      otherTerminaisons.shuffle(_random);
-      selectedTerminaisons.addAll(otherTerminaisons.take(count - selectedTerminaisons.length));
-    }
-
-    for (final terminaison in selectedTerminaisons) {
+    // Ajouter les terminaisons pièges (limité par count et ce qui est disponible)
+    final trapCount = verbTerminaisons.length < count ? verbTerminaisons.length : count;
+    for (final terminaison in verbTerminaisons.take(trapCount)) {
       terminaisons.add(VerbPart(text: terminaison, isRadical: false));
     }
 
