@@ -69,8 +69,20 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
     }
     _lastShowFeedback = state.showFeedback;
 
-    // Si terminé, afficher les résultats
-    if (state.isFinished) {
+    final question = state.currentQuestion;
+
+    // Si le jeu n'est pas encore initialisé, afficher un loader
+    if (question == null && state.questions.isEmpty) {
+      return Scaffold(
+        backgroundColor: Color(0xFFB3E5FC),
+        body: Center(
+          child: CircularProgressIndicator(color: Colors.orange),
+        ),
+      );
+    }
+
+    // Si terminé (et qu'il y avait des questions), afficher les résultats
+    if (state.isFinished && state.totalQuestions > 0) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         Navigator.pushReplacement(
           context,
@@ -83,14 +95,22 @@ class _VerbBuilderPageState extends ConsumerState<VerbBuilderPage> {
           ),
         );
       });
+
+      // Afficher un loader pendant la navigation
+      return Scaffold(
+        backgroundColor: Color(0xFFB3E5FC),
+        body: Center(
+          child: CircularProgressIndicator(color: Colors.orange),
+        ),
+      );
     }
 
-    final question = state.currentQuestion;
-
+    // Si question est null mais qu'on n'est pas fini, afficher un loader
     if (question == null) {
       return Scaffold(
+        backgroundColor: Color(0xFFB3E5FC),
         body: Center(
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(color: Colors.orange),
         ),
       );
     }

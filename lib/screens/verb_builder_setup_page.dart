@@ -201,7 +201,9 @@ class _VerbBuilderSetupPageState extends ConsumerState<VerbBuilderSetupPage> {
 
   Widget _buildVerbsList() {
     // Si tous les verbes sont sélectionnés, afficher un message simplifié
-    final allSelected = _selectedVerbs.length == _allVerbs.length;
+    final allSelected = _allVerbs.isNotEmpty &&
+                        _selectedVerbs.length == _allVerbs.length &&
+                        _allVerbs.every((v) => _selectedVerbs.contains(v.infinitif));
 
     if (allSelected) {
       return Column(
