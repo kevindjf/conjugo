@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../data/verb_builder_repository.dart';
 import '../models/verb_builder.dart';
 import '../models/verb_builder_config.dart';
-import '../data/verb_builder_repository.dart';
 import 'verb_builder_page.dart';
 
 /// Page de configuration du Bâtisseur de Verbes
@@ -149,7 +150,7 @@ class _VerbBuilderSetupPageState extends ConsumerState<VerbBuilderSetupPage> {
                   _selectedVerbs = _allVerbs.map((v) => v.infinitif).toSet();
                 });
               },
-              child: Text('Tous ($_allVerbs.length)'),
+              child: Text('Tous'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -202,8 +203,8 @@ class _VerbBuilderSetupPageState extends ConsumerState<VerbBuilderSetupPage> {
   Widget _buildVerbsList() {
     // Si tous les verbes sont sélectionnés, afficher un message simplifié
     final allSelected = _allVerbs.isNotEmpty &&
-                        _selectedVerbs.length == _allVerbs.length &&
-                        _allVerbs.every((v) => _selectedVerbs.contains(v.infinitif));
+        _selectedVerbs.length == _allVerbs.length &&
+        _allVerbs.every((v) => _selectedVerbs.contains(v.infinitif));
 
     if (allSelected) {
       return Column(
