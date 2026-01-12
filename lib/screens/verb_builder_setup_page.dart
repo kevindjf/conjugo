@@ -33,6 +33,8 @@ class _VerbBuilderSetupPageState extends ConsumerState<VerbBuilderSetupPage> {
       final verbs = await VerbBuilderRepository.loadVerbs();
       setState(() {
         _allVerbs = verbs;
+        // Sélectionner tous les verbes par défaut
+        _selectedVerbs = verbs.map((v) => v.infinitif).toSet();
         _isLoading = false;
       });
     } catch (e) {
@@ -198,7 +200,46 @@ class _VerbBuilderSetupPageState extends ConsumerState<VerbBuilderSetupPage> {
   }
 
   Widget _buildVerbsList() {
-    // Grouper les verbes par groupe
+    // Si tous les verbes sont sélectionnés, afficher un message simplifié
+    final allSelected = _selectedVerbs.length == _allVerbs.length;
+
+    if (allSelected) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Verbes sélectionnés: Tous (${_allVerbs.length})',
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 10),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.orange.shade50,
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: Colors.orange.shade200),
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.check_circle, color: Colors.orange.shade700),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Tous les verbes sont sélectionnés',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.orange.shade900,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
+    // Sinon, afficher la liste complète par groupe
     final groupe1 = _allVerbs.where((v) => v.groupe == '1').toList();
     final groupe2 = _allVerbs.where((v) => v.groupe == '2').toList();
     final groupe3 = _allVerbs.where((v) => v.groupe == '3').toList();

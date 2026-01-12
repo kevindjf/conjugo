@@ -75,12 +75,14 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
         correctRadical: correctAnswer.radical,
         allVerbs: verbs,
         count: config.distractorCount,
+        currentGroupe: verb.groupe,
       );
 
       final availableTerminaisons = _generateTerminaisons(
         correctTerminaison: correctAnswer.terminaison,
         allVerbs: verbs,
         count: config.distractorCount,
+        currentGroupe: verb.groupe,
       );
 
       // Créer la question
@@ -102,13 +104,18 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
     required String correctRadical,
     required List<VerbBuilder> allVerbs,
     required int count,
+    String? currentGroupe,
   }) {
     final radicals = <VerbPart>[
       VerbPart(text: correctRadical, isRadical: true),
     ];
 
-    // Ajouter des radicaux pièges
-    final allRadicals = allVerbs
+    // Ajouter des radicaux pièges du même groupe si possible
+    final sameGroupeVerbs = currentGroupe != null
+        ? allVerbs.where((v) => v.groupe == currentGroupe).toList()
+        : allVerbs;
+
+    final allRadicals = sameGroupeVerbs
         .expand((v) => v.uniqueRadicals)
         .where((r) => r != correctRadical)
         .toSet()
@@ -116,7 +123,20 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
 
     allRadicals.shuffle(_random);
 
-    for (final radical in allRadicals.take(count)) {
+    // Si pas assez de radicaux du même groupe, prendre des autres groupes
+    final selectedRadicals = allRadicals.take(count).toList();
+    if (selectedRadicals.length < count) {
+      final otherRadicals = allVerbs
+          .where((v) => v.groupe != currentGroupe)
+          .expand((v) => v.uniqueRadicals)
+          .where((r) => r != correctRadical && !selectedRadicals.contains(r))
+          .toSet()
+          .toList();
+      otherRadicals.shuffle(_random);
+      selectedRadicals.addAll(otherRadicals.take(count - selectedRadicals.length));
+    }
+
+    for (final radical in selectedRadicals) {
       radicals.add(VerbPart(text: radical, isRadical: true));
     }
 
@@ -131,13 +151,18 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
     required String correctTerminaison,
     required List<VerbBuilder> allVerbs,
     required int count,
+    String? currentGroupe,
   }) {
     final terminaisons = <VerbPart>[
       VerbPart(text: correctTerminaison, isRadical: false),
     ];
 
-    // Ajouter des terminaisons pièges
-    final allTerminaisons = allVerbs
+    // Ajouter des terminaisons pièges du même groupe si possible
+    final sameGroupeVerbs = currentGroupe != null
+        ? allVerbs.where((v) => v.groupe == currentGroupe).toList()
+        : allVerbs;
+
+    final allTerminaisons = sameGroupeVerbs
         .expand((v) => v.uniqueTerminaisons)
         .where((t) => t != correctTerminaison)
         .toSet()
@@ -145,7 +170,20 @@ class VerbBuilderNotifier extends StateNotifier<VerbBuilderState> {
 
     allTerminaisons.shuffle(_random);
 
-    for (final terminaison in allTerminaisons.take(count)) {
+    // Si pas assez de terminaisons du même groupe, prendre des autres groupes
+    final selectedTerminaisons = allTerminaisons.take(count).toList();
+    if (selectedTerminaisons.length < count) {
+      final otherTerminaisons = allVerbs
+          .where((v) => v.groupe != currentGroupe)
+          .expand((v) => v.uniqueTerminaisons)
+          .where((t) => t != correctTerminaison && !selectedTerminaisons.contains(t))
+          .toSet()
+          .toList();
+      otherTerminaisons.shuffle(_random);
+      selectedTerminaisons.addAll(otherTerminaisons.take(count - selectedTerminaisons.length));
+    }
+
+    for (final terminaison in selectedTerminaisons) {
       terminaisons.add(VerbPart(text: terminaison, isRadical: false));
     }
 
