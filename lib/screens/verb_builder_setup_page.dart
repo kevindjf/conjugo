@@ -452,7 +452,7 @@ class _VerbBuilderSetupPageState extends ConsumerState<VerbBuilderSetupPage> {
               _buildQuickSelectButton(
                 label: 'Groupe 3 ($groupe3Count)',
                 icon: Icons.looks_3,
-                color: Colors.purple,
+                color: Colors.deepPurple,
                 onPressed: () {
                   setState(() {
                     _selectedVerbs = _allVerbs
@@ -516,7 +516,7 @@ class _VerbBuilderSetupPageState extends ConsumerState<VerbBuilderSetupPage> {
   Widget _buildQuickSelectButton({
     required String label,
     required IconData icon,
-    required Color color,
+    required MaterialColor color,
     required VoidCallback onPressed,
   }) {
     return SizedBox(
@@ -552,13 +552,13 @@ class _VerbBuilderSetupPageState extends ConsumerState<VerbBuilderSetupPage> {
         children: [
           if (groupe1.isNotEmpty) _buildGroupSection('Groupe 1', groupe1, Colors.blue),
           if (groupe2.isNotEmpty) _buildGroupSection('Groupe 2', groupe2, Colors.orange),
-          if (groupe3.isNotEmpty) _buildGroupSection('Groupe 3', groupe3, Colors.purple),
+          if (groupe3.isNotEmpty) _buildGroupSection('Groupe 3', groupe3, Colors.deepPurple),
         ],
       ),
     );
   }
 
-  Widget _buildGroupSection(String title, List<VerbBuilder> verbs, Color color) {
+  Widget _buildGroupSection(String title, List<VerbBuilder> verbs, MaterialColor color) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
